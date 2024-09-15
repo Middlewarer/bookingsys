@@ -15,8 +15,6 @@ class Event(models.Model):
 
 class Booking(models.Model):
     user = models.CharField(max_length=100)
-    event = models.ForeignKey(Events, on_delete=models.CASCADE)
-    counter_of_places = Events.objects.all().count()
-
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
 
 # Create your models here.
